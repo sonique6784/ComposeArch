@@ -8,12 +8,12 @@ import androidx.compose.animation.ExperimentalAnimationApi
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
-import fr.sonique.composearch.ui.navigation.EnterAnimation
-import fr.sonique.composearch.ui.navigation.NavigationScreen
 import fr.sonique.composearch.screen1.Screen1
 import fr.sonique.composearch.screen1.Screen1ViewModel
 import fr.sonique.composearch.screen2.Screen2
 import fr.sonique.composearch.screen2.Screen2ViewModel
+import fr.sonique.composearch.ui.navigation.EnterAnimation
+import fr.sonique.composearch.ui.navigation.NavigationScreen
 import fr.sonique.composearch.ui.theme.ComposeTheme
 
 class MainActivity : ComponentActivity() {

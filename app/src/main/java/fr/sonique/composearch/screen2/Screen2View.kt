@@ -17,15 +17,18 @@ import fr.sonique.composearch.ui.theme.ComposeTheme
 
 @Composable
 fun Screen2(navController: NavController, screen2ViewModel: Screen2ViewModel) {
-    Column(modifier = Modifier
-        .fillMaxHeight()
-        .background(Color.LightGray), verticalArrangement = Arrangement.Bottom) {
-
-        //Spacer(modifier = Modifier.fillMaxHeight(fraction = 0.9f))
+    Column(
+        modifier = Modifier
+            .fillMaxHeight()
+            .background(Color.LightGray),
+        verticalArrangement = Arrangement.Bottom
+    ) {
         NavigationButton(navController, NavigationScreen.SCREEN_1)
     }
-    Column(modifier = Modifier
-        .fillMaxHeight(), verticalArrangement = Arrangement.Top) {
+    Column(
+        modifier = Modifier.fillMaxHeight(),
+        verticalArrangement = Arrangement.Top
+    ) {
         MyScreenTitle(title = "Screen 2")
     }
 }
@@ -36,6 +39,7 @@ fun Screen2Preview() {
     ComposeTheme {
         val navController = rememberNavController()
         val screen2ViewModel = Screen2ViewModel()
+
         Screen2(navController, screen2ViewModel)
     }
 }
