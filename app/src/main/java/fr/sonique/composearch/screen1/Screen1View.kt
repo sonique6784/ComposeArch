@@ -20,23 +20,18 @@ fun Screen1(navController: NavController, screen1ViewModel: Screen1ViewModel) {
 
     val title = screen1ViewModel.title.collectAsState(initial = "")
 
-    Column(modifier = Modifier
-        .fillMaxHeight()
-        .background(Color.LightGray)) {
-        MyScreenTitle(title = title.value)
-//        Text(text = "Screen 1",
-//            modifier = Modifier
-//                .fillMaxWidth()
-//                .padding(top = 16.dp, bottom = 16.dp),
-//            textAlign = TextAlign.Center)
-
-        NavigationButton(navController = navController, destination = NavigationScreen.SCREEN_2)
-//        Button(onClick = {
-//            Log.i(Screen.SCREEN_1.name, "Navigate to screen 2")
-//            navController.navigate(Screen.SCREEN_2.name)
-//        }, modifier = Modifier.fillMaxWidth()) {
-//            Text(text = "Go to Screen 2")
-//        }
+    Column(
+        modifier = Modifier
+            .fillMaxHeight()
+            .background(Color.LightGray)
+    ) {
+        MyScreenTitle(
+            title = title.value
+        )
+        NavigationButton(
+            navController = navController,
+            destination = NavigationScreen.SCREEN_2
+        )
     }
 }
 
@@ -46,6 +41,7 @@ fun Screen1Preview() {
     ComposeTheme {
         val navController = rememberNavController()
         val screen1ViewModel = Screen1ViewModel()
+
         Screen1(navController, screen1ViewModel)
     }
 }
